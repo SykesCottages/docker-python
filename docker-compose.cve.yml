@@ -3,56 +3,55 @@ version: "2"
 services:
 
   python-base:
-    build: base
-    command: base
+    build: "base"
+    command: "base"
     entrypoint: /security/parse-cve.sh
     volumes:
       - ./cve-reports:/cve-reports
       - ./scripts/parse-cve.sh:/security/parse-cve.sh
 
   python-27:
-    build: 2.7
-    command: 2.7
+    build: "2.7"
+    command: "2.7"
     entrypoint: /security/parse-cve.sh
     volumes:
       - ./cve-reports:/cve-reports
       - ./scripts/parse-cve.sh:/security/parse-cve.sh
 
   python-36:
-    build: 3.6
-    command: 3.6
+    build: "3.6"
+    command: "3.6"
     entrypoint: /security/parse-cve.sh
     volumes:
       - ./cve-reports:/cve-reports
       - ./scripts/parse-cve.sh:/security/parse-cve.sh
-
   python-37:
-    build: 3.7
-    command: 3.7
+    build: "3.7"
+    command: "3.7"
     entrypoint: /security/parse-cve.sh
     volumes:
       - ./cve-reports:/cve-reports
       - ./scripts/parse-cve.sh:/security/parse-cve.sh
 
   python-38:
-    build: 3.8
-    command: 3.8
+    build: "3.8"
+    command: "3.8"
     entrypoint: /security/parse-cve.sh
     volumes:
       - ./cve-reports:/cve-reports
       - ./scripts/parse-cve.sh:/security/parse-cve.sh
 
   python-39:
-    build: 3.9
-    command: 3.9
+    build: "3.9"
+    command: "3.9"
     entrypoint: /security/parse-cve.sh
     volumes:
       - ./cve-reports:/cve-reports
       - ./scripts/parse-cve.sh:/security/parse-cve.sh
 
   python-310:
-    build: 3.10
-    command: 3.10
+    build: "3.10"
+    command: "3.10"
     entrypoint: /security/parse-cve.sh
     volumes:
       - ./cve-reports:/cve-reports
