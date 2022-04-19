@@ -2,11 +2,6 @@ FROM sykescottages/python:base
 
 ARG PYTHON_VERSION=2.7.18
 
-RUN apt-get update && \
-    apt-get install -yy \
-      zlib1g-dev \
-      libssl-dev
-
 RUN apt-get autoremove -y -q && \
     apt-get autoclean -y -q && \
     rm -rf /var/lib/apt/lists/*
