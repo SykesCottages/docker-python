@@ -9,7 +9,8 @@ RUN apt-get update && \
         zlib1g-dev \
         libssl-dev \
         libbz2-dev \
-        libffi-dev
+        libffi-dev \
+        liblzma-dev
 
 RUN apt-get autoremove -y -q && \
     apt-get autoclean -y -q && \
