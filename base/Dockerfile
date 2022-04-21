@@ -8,7 +8,8 @@ RUN apt-get update && \
         make \
         zlib1g-dev \
         libssl-dev \
-        libbz2-dev
+        libbz2-dev \
+        libffi-dev
 
 RUN apt-get autoremove -y -q && \
     apt-get autoclean -y -q && \
