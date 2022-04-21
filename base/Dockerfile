@@ -7,7 +7,8 @@ RUN apt-get update && \
         gcc \
         make \
         zlib1g-dev \
-        libssl-dev
+        libssl-dev \
+        libbz2-dev
 
 RUN apt-get autoremove -y -q && \
     apt-get autoclean -y -q && \

@@ -41,9 +41,8 @@ Due to missing non-essential dependencies we exclude the following:
 ```shell
 _bsddb             _curses            _curses_panel   
 _sqlite3           _tkinter           bsddb185        
-bz2                dbm                dl              
-gdbm               imageop            readline        
-sunaudiodev                                           
+dbm                dl                 gdbm
+imageop            readline           sunaudiodev                                           
 ```
 
 If you do require any of the above you will need to rebuild python with the dependencies installed.
