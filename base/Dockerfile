@@ -5,7 +5,12 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime
 RUN apt-get update && \
     apt-get install -yy \
         gcc \
-        make
+        make \
+        zlib1g-dev \
+        libssl-dev \
+        libbz2-dev \
+        libffi-dev \
+        liblzma-dev
 
 RUN apt-get autoremove -y -q && \
     apt-get autoclean -y -q && \

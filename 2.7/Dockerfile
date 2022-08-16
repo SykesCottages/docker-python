@@ -2,11 +2,6 @@ FROM sykescottages/python:base
 
 ARG PYTHON_VERSION=2.7.18
 
-RUN apt-get update && \
-    apt-get install -yy \
-      zlib1g-dev \
-      libssl-dev
-
 RUN apt-get autoremove -y -q && \
     apt-get autoclean -y -q && \
     rm -rf /var/lib/apt/lists/*
@@ -18,6 +13,8 @@ RUN curl https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSIO
     cd /tmp/Python-$PYTHON_VERSION && \
     ./configure && \
     make && \
-    make install && \
-    curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output /tmp/get-pip.py && \
+    make install
+
+RUN curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output /tmp/get-pip.py && \
+    echo "eb9155ad7e5b8bd63fa22858ba1929cd141ec782210d37d30bd37ec9554597d0d145c8ce629df5e1ce282a832a856e5b  /tmp/get-pip.py" | sha384sum --check && \
     python /tmp/get-pip.py
