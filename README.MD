@@ -6,14 +6,14 @@ We use a variety of Python containers at Sykes Cottages across our platforms, bu
 All of our Python images are based off the [Base Sykes](https://github.com/SykesCottages/docker-base) image which uses the official Ubuntu Docker image.
 We opted for this path to utilise aptitude so we could manage packages easier and utilise the package integrity verification that comes with apititude.
 
-## Available Versions
-Tag - Python Version
-- 2.7 - 2.7.18 (Deprecated)
-- 3.6 - 3.6.15 (Deprecated)
-- **3.7 - 3.7.13 (LTS EOL 2023-06-27)**
-- **3.8 - 3.8.13 (LTS EOL 2024-10-01)**
-- **3.9 - 3.9.13 (LTS EOL 2025-10-01)**
-- **3.10 - 3.10.6 (LTS EOL 2026-10-01)**
+## Supported versions and available tags
+
+- 2.7.18 (Deprecated) - `sykescottages/python:2.7`
+- 3.6.15 (Deprecated) - `sykescottages/python:3.6`
+- **3.7.13 (LTS EOL 2023-06-27)** - `sykescottages/python:3.7`
+- **3.8.13 (LTS EOL 2024-10-01)** - `sykescottages/python:3.8`
+- **3.9.13 (LTS EOL 2025-10-01)** - `sykescottages/python:3.9`
+- **3.10.6 (LTS EOL 2026-10-01)** - `sykescottages/python:3.10`
 
 ## Usage
 
