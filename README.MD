@@ -10,10 +10,11 @@ We opted for this path to utilise aptitude so we could manage packages easier an
 
 - 2.7.18 (Deprecated) - `sykescottages/python:2.7`
 - 3.6.15 (Deprecated) - `sykescottages/python:3.6`
-- **3.7.13 (LTS EOL 2023-06-27)** - `sykescottages/python:3.7`
-- **3.8.13 (LTS EOL 2024-10-01)** - `sykescottages/python:3.8`
-- **3.9.13 (LTS EOL 2025-10-01)** - `sykescottages/python:3.9`
-- **3.10.6 (LTS EOL 2026-10-01)** - `sykescottages/python:3.10`
+- **3.7.15 (LTS EOL 2023-06-27)** - `sykescottages/python:3.7`
+- **3.8.15 (LTS EOL 2024-10-01)** - `sykescottages/python:3.8`
+- **3.9.15 (LTS EOL 2025-10-01)** - `sykescottages/python:3.9`
+- **3.10.8 (LTS EOL 2026-10-01)** - `sykescottages/python:3.10`
+- **3.11.0 (LTS EOL 2027-10-01)** - `sykescottages/python:3.11`
 
 ## Usage
 

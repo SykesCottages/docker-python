@@ -56,3 +56,11 @@ services:
     volumes:
       - ./cve-reports:/cve-reports
       - ./scripts/parse-cve.sh:/security/parse-cve.sh
+
+  python-311:
+    build: "3.11"
+    command: "3.11"
+    entrypoint: /security/parse-cve.sh
+    volumes:
+      - ./cve-reports:/cve-reports
+      - ./scripts/parse-cve.sh:/security/parse-cve.sh
