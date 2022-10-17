@@ -1,12 +1,13 @@
 FROM sykescottages/python:base
 
 ARG PYTHON_VERSION=3.11.0
+ARG SUFFIX=rc2
 
-RUN curl https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tgz --output /tmp/Python.tgz && \
+RUN curl https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION$SUFFIX.tgz --output /tmp/Python.tgz && \
     echo $(sha384sum /tmp/Python.tgz) && \
-    echo "652b3a2caaf61a850f0f21eb37eac2420c872f5c94ca8939c4c9e24ab81e446eeb52f03abd39b1ae89ccd5e64e7e3833  /tmp/Python.tgz" | sha384sum --check && \tar -xvf /tmp/Python.tgz -C /tmp && \
+    echo "6bab625470ce339905b2348c577eb6e5a1b9317509158b5f4f7a7b5054ef560b3aee2518d207a83ab6a53bd8cc808f71  /tmp/Python.tgz" | sha384sum --check && \tar -xvf /tmp/Python.tgz -C /tmp && \
     tar -xvf /tmp/Python.tgz -C /tmp && \
-    cd /tmp/Python-$PYTHON_VERSION && \
+    cd /tmp/Python-$PYTHON_VERSION$SUFFIX && \
     ./configure && \
     make && \
     make install && \
