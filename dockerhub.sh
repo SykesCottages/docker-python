@@ -1,5 +1,7 @@
 #!/bin/bash
 
+LATEST_VERSION="3.11"
+
 # You need to provide your own creds because #security
 docker login
 
@@ -11,7 +13,12 @@ for VERSION in "${VERSIONS[@]}"
 do
   docker build --no-cache -t sykescottages/python:${VERSION} $VERSION
   docker push sykescottages/python:${VERSION}
-
+  # Tagging latest version
+  if [[ "$LATEST_VERSION" == "$VERSION" ]]; then
+    docker tag sykescottages/python:${VERSION} sykescottages/python:latest
+    docker push sykescottages/python:latest
+    docker rmi sykescottages/python:latest
+  fi
   docker rmi sykescottages/python:${VERSION}
 done
 
