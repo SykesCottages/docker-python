@@ -1,10 +1,10 @@
 FROM sykescottages/python:base
 
-ARG PYTHON_VERSION=3.8.15
+ARG PYTHON_VERSION=3.8.16
 
 RUN curl https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tgz --output /tmp/Python.tgz && \
     echo $(sha384sum /tmp/Python.tgz) && \
-    echo "4a539db65dd0d809278d9e8eb4e02b1156e27ece033f55674e0b53637f848a7cae4ca2d6b05035453e1bdeb950757281  /tmp/Python.tgz" | sha384sum --check && \tar -xvf /tmp/Python.tgz -C /tmp && \
+    echo "98c693385256aea67a38e312b08c0058637ac627ac7acf5e5c5e6b2cce4e47e35341877fa4833ba622d954bd63a234d6  /tmp/Python.tgz" | sha384sum --check && \tar -xvf /tmp/Python.tgz -C /tmp && \
     tar -xvf /tmp/Python.tgz -C /tmp && \
     cd /tmp/Python-$PYTHON_VERSION && \
     ./configure && \
