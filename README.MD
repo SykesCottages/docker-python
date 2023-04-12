@@ -13,8 +13,8 @@ We opted for this path to utilise aptitude so we could manage packages easier an
 - **3.7.16 (LTS EOL 2023-06-27)** - `sykescottages/python:3.7`
 - **3.8.16 (LTS EOL 2024-10-01)** - `sykescottages/python:3.8`
 - **3.9.16 (LTS EOL 2025-10-01)** - `sykescottages/python:3.9`
-- **3.10.10 (LTS EOL 2026-10-01)** - `sykescottages/python:3.10`
-- **3.11.2 (LTS EOL 2027-10-01)** - `sykescottages/python:3.11`
+- **3.10.11 (LTS EOL 2026-10-01)** - `sykescottages/python:3.10`
+- **3.11.3 (LTS EOL 2027-10-01)** - `sykescottages/python:3.11`
 
 ## Usage
 

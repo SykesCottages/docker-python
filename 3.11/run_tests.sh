@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PYTHON_VERSION=3.11.2
-PIP_VERSION=22.3.1
+PYTHON_VERSION=3.11.3
+PIP_VERSION=23.0.1
 
 itShouldCheckThatAllInstalledSoftwareExists() {
     doesCommandExist python
