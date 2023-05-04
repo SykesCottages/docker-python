@@ -1,4 +1,4 @@
-FROM sykescottages/python:base
+FROM sykescottages/python:base-legacy
 
 ARG PYTHON_VERSION=2.7.18
 
