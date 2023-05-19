@@ -18,5 +18,3 @@ do
   fi
   docker rmi sykescottages/python:${VERSION}
 done
-
-docker rmi sykescottages/python:base
