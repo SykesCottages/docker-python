@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSIONS=("base" "base-legacy" "2.7" "3.6" "3.7" "3.8" "3.9" "3.10" "3.11")
+VERSIONS=($(find . -type d -regex '.*/[0-9]+\.[0-9]+' | sort | sed 's/\.\///'))
 for VERSION in "${VERSIONS[@]}"; do
   docker-compose -f $VERSION/docker-compose.test.yml build --no-cache &&
     docker-compose -f $VERSION/docker-compose.test.yml run --rm sut

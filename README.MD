@@ -16,6 +16,11 @@ We opted for this path to utilise aptitude so we could manage packages easier an
 - **3.10.13 (LTS EOL 2026-10-01)** - `sykescottages/python:3.10`
 - **3.11.5 (LTS EOL 2027-10-01)** - `sykescottages/python:3.11`
 
+## Image Itinerary
+
+For better visibility of packages there is now an included aptitude itinerary with each tag, this is located in the corresponding folder to the tag.
+This will give better clarity on package version changes and be reflected in the git history.
+
 ## Usage
 
 Pulling an image:

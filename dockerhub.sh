@@ -5,7 +5,10 @@ LATEST_VERSION="3.11"
 # You need to provide your own creds because #security
 docker login >> /dev/null 2>&1
 
-VERSIONS=( "base" "base-legacy" "2.7" "3.6" "3.7" "3.8" "3.9" "3.10" "3.11" )
+./build.sh "base" $LATEST_VERSION >> /dev/null 2>&1 &
+./build.sh "base-legacy" $LATEST_VERSION >> /dev/null 2>&1 &
+
+VERSIONS=($(find . -type d -regex '.*/[0-9]+\.[0-9]' | sort | sed 's/\.\///'))
 for VERSION in "${VERSIONS[@]}"
 do
   ./build.sh $VERSION $LATEST_VERSION >> /dev/null 2>&1 &
