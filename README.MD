@@ -14,8 +14,8 @@ We opted for this path to utilise aptitude so we could manage packages easier an
 - **3.8.18 (LTS EOL 2024-10-01)** - `sykescottages/python:3.8`
 - **3.9.18 (LTS EOL 2025-10-01)** - `sykescottages/python:3.9`
 - **3.10.13 (LTS EOL 2026-10-01)** - `sykescottages/python:3.10`
-- **3.11.5 (LTS EOL 2027-10-01)** - `sykescottages/python:3.11`
-- **3.12.0 (Pre-release)** - `sykescottages/python:3.11`
+- **3.11.6 (LTS EOL 2027-10-01)** - `sykescottages/python:3.11`
+- **3.12.0 (LTS EOL 2028-10-01)** - `sykescottages/python:3.12`
 
 ## Image Itinerary
 
