@@ -3,14 +3,21 @@
 VERSION=$1
 LATEST_VERSION=$2
 
-docker build --no-cache -t sykescottages/python:${VERSION} $VERSION
-docker push sykescottages/python:${VERSION}
+docker buildx build \
+  --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm64/v8 \
+  --quiet \
+  --no-cache \
+  --push \
+  -t sykescottages/python:${VERSION} \
+  $VERSION
 
 # Tagging latest version
 if [[ "$LATEST_VERSION" == "$VERSION" ]]; then
-  docker tag sykescottages/python:${VERSION} sykescottages/python:latest
-  docker push sykescottages/python:latest
-  docker rmi sykescottages/python:latest
+  docker buildx build \
+    --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm64/v8 \
+    --quiet \
+    --no-cache \
+    --push \
+    -t sykescottages/python:latest \
+    $VERSION
 fi
-
-docker rmi sykescottages/python:${VERSION}
