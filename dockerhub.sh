@@ -19,7 +19,7 @@ fi
 
 wait
 
-VERSIONS=($(find . -type d -regex '.*/[0-9]+\.[0-9]' | sort | sed 's/\.\///'))
+VERSIONS=($(find . -type d -regex '.*/[0-9]+\.[0-9]+' | sort | sed 's/\.\///'))
 for VERSION in "${VERSIONS[@]}"
 do
   ./build.sh $VERSION $ARCH >> /dev/null 2>&1 &
