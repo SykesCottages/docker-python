@@ -6,6 +6,24 @@ We use a variety of Python containers at Sykes Cottages across our platforms, bu
 All of our Python images are based off the [Base Sykes](https://github.com/SykesCottages/docker-base) image which uses the official Ubuntu Docker image.
 We opted for this path to utilise aptitude so we could manage packages easier and utilise the package integrity verification that comes with apititude.
 
+## Architecture Support
+
+All our images have support for:
+- `linux/amd64`
+- `linux/arm64/v8`
+
+Obtaining platform specific architectures:
+
+```shell
+docker pull --platform=<ARCHITECTURE> sykescottages/python:<VERSION>
+```
+
+Testing you have the right architecture:
+
+```shell
+docker run -it --platform=<ARCHITECTURE> sykescottages/python:<VERSION> arch
+```
+
 ## Supported versions and available tags
 
 - 2.7.18 (Deprecated) - `sykescottages/python:2.7`
