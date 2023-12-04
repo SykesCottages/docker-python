@@ -1,4 +1,5 @@
-FROM sykescottages/python:base
+ARG ARCH=amd64
+FROM sykescottages/python:base-$ARCH
 
 ARG PYTHON_VERSION=3.7.17
 

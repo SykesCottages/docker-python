@@ -1,4 +1,5 @@
-FROM sykescottages/python:base-legacy
+ARG ARCH=amd64
+FROM sykescottages/python:base-legacy-$ARCH
 
 ARG PYTHON_VERSION=2.7.18
 
