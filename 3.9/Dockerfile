@@ -1,11 +1,11 @@
 ARG ARCH=amd64
 FROM sykescottages/python:base-$ARCH
 
-ARG PYTHON_VERSION=3.9.18
+ARG PYTHON_VERSION=3.9.19
 
 RUN curl https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tgz --output /tmp/Python.tgz && \
     echo $(sha384sum /tmp/Python.tgz) && \
-    echo "f713544332479d7fa7080db780703d7728b6002ba23b77885fa87922fab1ce3ee8316900c7de49b502b8624adcffb097  /tmp/Python.tgz" | sha384sum --check && \tar -xvf /tmp/Python.tgz -C /tmp && \
+    echo "9ba5d1ba9c325313dcc1cb9a29175373a77820cfbef08a755b61c811b78c8ef0eb14ad6d52597a1ac85c1d8aa7d7157b  /tmp/Python.tgz" | sha384sum --check && \tar -xvf /tmp/Python.tgz -C /tmp && \
     cd /tmp/Python-$PYTHON_VERSION && \
     ./configure && \
     make && \

@@ -29,10 +29,10 @@ docker run -it --platform=<ARCHITECTURE> sykescottages/python:<VERSION> arch
 - 2.7.18 (Deprecated) - `sykescottages/python:2.7`
 - 3.6.15 (Deprecated) - `sykescottages/python:3.6`
 - 3.7.17 (Deprecated) - `sykescottages/python:3.7`
-- **3.8.18 (LTS EOL 2024-10-01)** - `sykescottages/python:3.8`
-- **3.9.18 (LTS EOL 2025-10-01)** - `sykescottages/python:3.9`
-- **3.10.13 (LTS EOL 2026-10-01)** - `sykescottages/python:3.10`
-- **3.11.8 (LTS EOL 2027-10-01)** - `sykescottages/python:3.11`
+- **3.8.19 (LTS EOL 2024-10-01)** - `sykescottages/python:3.8`
+- **3.9.19 (LTS EOL 2025-10-01)** - `sykescottages/python:3.9`
+- **3.10.14 (LTS EOL 2026-10-01)** - `sykescottages/python:3.10`
+- **3.11.9 (LTS EOL 2027-10-01)** - `sykescottages/python:3.11`
 - **3.12.2 (LTS EOL 2028-10-01)** - `sykescottages/python:3.12`
 
 ## Image Itinerary
