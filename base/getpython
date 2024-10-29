@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -e
+
+VERSION=$1
+
+curl "https://www.python.org/ftp/python/${VERSION}/Python-${VERSION}.tar.xz" -o "/tmp/Python-${VERSION}.tar.xz"
+curl "https://www.python.org/ftp/python/${VERSION}/Python-${VERSION}.tar.xz.asc" -o "/tmp/Python-${VERSION}.tar.xz.asc"
+
+# https://www.python.org/downloads/ (OpenPGP Public Keys)
+gpg --recv-keys A821E680E5FA6305 64E628F8D684696D B26995E310250568 2D347EA6AA65421D FB9921286F5E1540
+
+gpg --verify "/tmp/Python-${VERSION}.tar.xz.asc" "/tmp/Python-${VERSION}.tar.xz"
+
+tar -xvf "/tmp/Python-${VERSION}.tar.xz" -C /tmp
+
+cd "/tmp/Python-${VERSION}"
+./configure
+
+make
+make install
+
+ln -s /usr/local/bin/python3 /usr/local/bin/python
+ln -s /usr/local/bin/pip3 /usr/local/bin/pip

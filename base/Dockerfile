@@ -18,5 +18,6 @@ RUN apt-get autoremove -y -q && \
     rm -rf /var/lib/apt/lists/*
 
 COPY entrypoint /usr/local/bin/
+COPY getpython /usr/local/bin/
 
 ENTRYPOINT [ "entrypoint" ]
