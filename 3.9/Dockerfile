@@ -1,4 +1,4 @@
 ARG ARCH=amd64
 FROM sykescottages/python:base-$ARCH
 
-RUN getpython 3.9.21
+RUN getpython 3.9.25
