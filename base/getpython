@@ -3,14 +3,22 @@
 set -e
 
 VERSION=$1
+CHECKSUM=$2
 
-curl "https://www.python.org/ftp/python/${VERSION}/Python-${VERSION}.tar.xz" -o "/tmp/Python-${VERSION}.tar.xz"
-curl "https://www.python.org/ftp/python/${VERSION}/Python-${VERSION}.tar.xz.asc" -o "/tmp/Python-${VERSION}.tar.xz.asc"
+curl -f "https://www.python.org/ftp/python/${VERSION}/Python-${VERSION}.tar.xz" -o "/tmp/Python-${VERSION}.tar.xz"
 
-# https://www.python.org/downloads/ (OpenPGP Public Keys)
-gpg --recv-keys A821E680E5FA6305 64E628F8D684696D B26995E310250568 2D347EA6AA65421D FB9921286F5E1540
+if [ -n "$CHECKSUM" ]; then
+    echo "${CHECKSUM}  /tmp/Python-${VERSION}.tar.xz" | sha256sum -c -
+else
+    # Fallback to GPG check if no checksum is provided
+    if ! curl -f -s "https://www.python.org/ftp/python/${VERSION}/Python-${VERSION}.tar.xz.asc" -o "/tmp/Python-${VERSION}.tar.xz.asc"; then
+        curl -f -s "https://www.python.org/ftp/python/${VERSION}/Python-${VERSION}.tar.xz.sigstore" -o "/tmp/Python-${VERSION}.tar.xz.asc"
+    fi
 
-gpg --verify "/tmp/Python-${VERSION}.tar.xz.asc" "/tmp/Python-${VERSION}.tar.xz"
+    # https://www.python.org/downloads/ (OpenPGP Public Keys)
+    gpg --recv-keys A821E680E5FA6305 64E628F8D684696D B26995E310250568 2D347EA6AA65421D FB9921286F5E1540
+    gpg --verify "/tmp/Python-${VERSION}.tar.xz.asc" "/tmp/Python-${VERSION}.tar.xz"
+fi
 
 tar -xvf "/tmp/Python-${VERSION}.tar.xz" -C /tmp
 
