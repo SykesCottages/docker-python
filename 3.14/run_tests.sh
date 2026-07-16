@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PYTHON_VERSION=3.14.3
+PYTHON_VERSION=3.14.6
 PIP_VERSION=26.0.1
 
 itShouldCheckThatAllInstalledSoftwareExists() {

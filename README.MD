@@ -35,7 +35,7 @@ docker run -it --platform=<ARCHITECTURE> sykescottages/python:<VERSION> arch
 - **3.11.15 (LTS EOL 2027-10-01)** - `sykescottages/python:3.11`
 - **3.12.13 (LTS EOL 2028-10-01)** - `sykescottages/python:3.12`
 - **3.13.12 (LTS EOL 2029-10-01)** - `sykescottages/python:3.13`
-- **3.14.3 (LTS EOL 2030-10-01)** - `sykescottages/python:3.14`
+- **3.14.6 (LTS EOL 2030-10-01)** - `sykescottages/python:3.14`
 
 ## Image Itinerary
 
