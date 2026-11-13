@@ -16,7 +16,7 @@ else
     fi
 
     # https://www.python.org/downloads/ (OpenPGP Public Keys)
-    gpg --recv-keys A821E680E5FA6305 64E628F8D684696D B26995E310250568 2D347EA6AA65421D FB9921286F5E1540
+    gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys A821E680E5FA6305 64E628F8D684696D B26995E310250568 2D347EA6AA65421D FB9921286F5E1540
     gpg --verify "/tmp/Python-${VERSION}.tar.xz.asc" "/tmp/Python-${VERSION}.tar.xz"
 fi
 
